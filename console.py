@@ -96,6 +96,9 @@ class HBNBCommand(cmd.Cmd):
         """ Method to exit the HBNB console"""
         exit()
 
+    def do_arg(self, *arg, **kwargs):
+        print(kwargs)
+
     def help_quit(self):
         """ Prints the help documentation for quit  """
         print("Exits the program with formatting\n")
@@ -115,6 +118,8 @@ class HBNBCommand(cmd.Cmd):
 
     def do_create(self, args):
         """ Create an object of any class"""
+        print(kwargs)
+        print(args)
         if not args:
             print("** class name missing **")
             return
